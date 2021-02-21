@@ -12,7 +12,7 @@ def computePay(hours, rate):
 
     reg = fh * fr    
 
-    if fh > 30:
+    if fh > 40:
         print('You work more than the required hours this week')
         overTime = timeHalf * fr
         print('Do you work overtime: Y/N')
