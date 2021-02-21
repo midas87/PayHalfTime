@@ -1,9 +1,12 @@
 def computePay(hours, rate):
-    print('In computePay', hours, rate)
+    # print('In computePay', hours, rate)
 
     hours = input('Enter Hours: ')
     rate = input('Enter Rate: ')
-    wages = int(13)
+    # print('Do you work over time: ')
+    # overTime = float(input())
+    # requireHours = float(40.0)
+    # wages = int(13)
     timeHalf = float(1.5)
 
     # Making Floating Variable
@@ -11,17 +14,22 @@ def computePay(hours, rate):
     fh = float(hours)
     fr = float(rate)
 
-    if fh > 40:
-        print('You work more than the require hours of work')
-        reg = fh * wages
-        overTimeHour = fh - fh
-        overTime = timeHalf * wages
-        overTimePay = overTime * overTimeHour
-        xp = reg + overTimePay
+    if fh > 30:
+        print('You work more than the required hours this week')
+        reg = fh * fr
+        # overTimeHour = fh - requireHours
+        overTime = timeHalf * fr
+        print('Do you work overtime: Y/N')
+        que = input()
+        if que == 'y':
+            overTimeHour = int(input('overtime: '))
+            overTimePay = overTime * overTimeHour
+            xp = reg + overTimePay
+            print('Pay:$', xp)
     else:
-        pay = hours * rate
-
-    print(pay)  # pay
+        print('Pay ', reg)
 
 
-computePay(fh, fr)
+computePay(10, 11)
+
+# print('Pay: ', xp)
